@@ -38,10 +38,16 @@ const Hero = () => {
         <div className="flex-1 w-full   ">
           <div className="w-full relative md:aspect-[4/5] aspect-video bg-gray-300 rounded-3xl overflow-hidden">
             <Image
-              src="/coverphoto01.jpg"
+              src="/images/homepage.JPG"
               alt="cover"
               fill
-              className="object-cover"
+              className="object-cover md:hidden"
+            />
+            <Image
+              src="/images/homepageDesktop.jpg"
+              alt="cover"
+              fill
+              className="object-cover hidden md:block"
             />
             <div className="absolute inset-0 bg-black/30 text-black "></div>
             <div className="absolute top-4 left-4 bg-white/90 rounded-full px-4 py-1 text-sm font-medium">

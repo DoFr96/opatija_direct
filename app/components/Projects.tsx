@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 
 const Projects = () => {
   return (
-    <section className="py-10 sm:px-8 px-4">
+    <section id="projekti" className="py-10 sm:px-8 px-4">
       <div className="max-w-[1000px] mx-auto">
         <div className="mb-10">
           <p className="uppercase text-sm text-black/70">Nasi projekti</p>

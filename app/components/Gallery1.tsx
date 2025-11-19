@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
+import { useEffect } from "react";
 type GalleryProps = {
   images: string[]; // primamo array putanja
 };
@@ -10,6 +10,22 @@ type GalleryProps = {
 export default function Gallery1({ images }: GalleryProps) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (open) {
+      const originalBodyOverflow = document.body.style.overflow;
+      const originalHtmlOverflow = document.documentElement.style.overflow;
+
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+
+      // cleanup kad se zatvori modal ili unmounta komponenta
+      return () => {
+        document.body.style.overflow = originalBodyOverflow;
+        document.documentElement.style.overflow = originalHtmlOverflow;
+      };
+    }
+  }, [open]);
 
   // za swipe
   const [touchStartX, setTouchStartX] = useState<number | null>(null);

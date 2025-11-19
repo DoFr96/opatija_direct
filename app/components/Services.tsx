@@ -21,7 +21,7 @@ const Services = () => {
     },
   ];
   return (
-    <section className="w-full my-20 px-4 sm:px-8">
+    <section id="usluge" className="w-full my-20 px-4 sm:px-8">
       <div className="max-w-[1000px] mx-auto">
         {/*Gornja strana services*/}
         <div className="flex md:flex-row flex-col gap-8 justify-between md:items-center items-start">
@@ -50,10 +50,10 @@ const Services = () => {
               return (
                 <li key={index} className="flex flex-1 group">
                   <div
-                    className={`px-3 py-6 flex justify-between  h-full w-full flex-col border border-black/30  ${
+                    className={`cursor-pointer px-3 py-6 flex justify-between  h-full w-full flex-col border border-black/30  ${
                       index == 0
                         ? "bg-black text-white"
-                        : "bg-white text-black  hover:bg-black group-hover:text-white transition-colors duration-200 "
+                        : "bg-white text-black  hover:bg-black group-hover:text-white transition-colors duration-300 "
                     }`}
                   >
                     <div className="space-y-3">
@@ -62,7 +62,7 @@ const Services = () => {
                         className={`text-sm ${
                           index == 0
                             ? " text-white/70"
-                            : " text-black/70 group-hover:text-white/70 transition-colors duration-200 "
+                            : " text-black/70 group-hover:text-white/70 transition-colors duration-300 "
                         }`}
                       >
                         {item.description}

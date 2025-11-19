@@ -74,7 +74,7 @@ export const projects = [
     size: 195,
     rooms: 3,
     baths: 3,
-    image: "/projects/sea-view-residence.jpg",
+    image: "/images/kuca4/kuca4cover.jpg",
     summary:
       "Rezidencija s velikim staklenim stijenama i terasom s pogledom na more.",
     description: "",

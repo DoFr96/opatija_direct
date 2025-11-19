@@ -20,9 +20,9 @@ const Navbar = () => {
   }, [open]);
 
   const navItems = [
-    { label: "Usluge", href: "/who-are-we" },
-    { label: "Projekti", href: "/projects" },
-    { label: "Contact", href: "/contact" },
+    { label: "Usluge", href: "#usluge" },
+    { label: "Projekti", href: "#projekti" },
+    { label: "Contact", href: "#kontakt" },
   ];
   return (
     <header className=" w-full">
