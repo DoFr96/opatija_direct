@@ -38,27 +38,44 @@ const Hero = () => {
         <div className="flex-1 w-full   ">
           <div className="w-full relative md:aspect-[4/5] aspect-video bg-gray-300 rounded-3xl overflow-hidden">
             <Image
-              src="/images/homepage.JPG"
+              src="/images/mobilecover.webp"
               alt="cover"
               fill
               className="object-cover md:hidden"
             />
             <Image
-              src="/images/homepageDesktop.jpg"
+              src="/images/homecoverdesktop.webp"
               alt="cover"
               fill
               className="object-cover hidden md:block"
             />
-            <div className="absolute inset-0 bg-black/30 text-black "></div>
-            <div className="absolute top-4 left-4 bg-white/90 rounded-full px-4 py-1 text-sm font-medium">
-              Zavrsenih projekta 7
+            {/*Desktop dodatak na slici*/}
+            <div className="md:block hidden">
+              <div className="absolute inset-0  text-black "></div>
+              <div className="absolute top-4 left-4 bg-white/90 rounded-full px-4 py-1 text-sm font-medium">
+                Zavrsenih projekta 10
+              </div>
+              <div className="absolute bottom-4 right-4 bg-black/85 rounded-2xl  text-white text-xs px-4 py-2">
+                <p className="uppercase tracking-[0.2em]">Trenutni projekt</p>
+                <p className="text-sm font-semibold"> Villa 5, Vodnjan </p>
+                <p className="text-[11px] text-white/70">
+                  215 m² · bazen · pogled na zelenilo
+                </p>
+              </div>
             </div>
-            <div className="absolute bottom-4 right-4 bg-black/85 rounded-2xl  text-white text-xs px-4 py-2">
-              <p className="uppercase tracking-[0.2em]">Trenutni projekt</p>
-              <p className="text-sm font-semibold"> Villa Aurora, Opatija </p>
-              <p className="text-[11px] text-white/70">
-                220 m² · bazen · pogled na more
-              </p>
+            {/*Mobile dodatak na slici*/}
+            <div className="md:hidden block">
+              <div className="absolute inset-0  text-black "></div>
+              <div className="absolute top-4 left-4 bg-white/90 rounded-full px-4 py-1 text-[13px] font-medium">
+                Zavrsenih projekta 10
+              </div>
+              <div className="absolute bottom-4 right-4 bg-black/85 rounded-2xl  text-white text-[11px] px-4 py-2">
+                <p className="uppercase tracking-[0.15em]">Trenutni projekt</p>
+                <p className="text-[13px] font-semibold"> Villa 5, Vodnjan </p>
+                <p className="text-[10px] text-white/70">
+                  215 m² · bazen · pogled na zelenilo
+                </p>
+              </div>
             </div>
           </div>
         </div>

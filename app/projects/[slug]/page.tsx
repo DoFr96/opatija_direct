@@ -1,5 +1,6 @@
 import Gallery from "@/app/components/Gallery";
 import Gallery1 from "@/app/components/Gallery1";
+import VideoPlayer from "@/app/components/VideoPlayer";
 import { projects } from "@/app/data/projects";
 import Image from "next/image";
 
@@ -33,6 +34,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     images = [],
     description,
     image,
+    video,
   } = project;
 
   return (
@@ -44,6 +46,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </p>
         <p className="text-lg leading-relaxed text-black/80">{description}</p>
         <Gallery1 images={images} />
+        <VideoPlayer video={video} />
       </div>
     </section>
   );
